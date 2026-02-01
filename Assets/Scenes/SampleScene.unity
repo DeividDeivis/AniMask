@@ -1779,7 +1779,7 @@ MonoBehaviour:
   - avatarSprite: {fileID: 0}
     avatarName: 
     dialogue: "...O la m\xE1scara te est\xE1 haciendo hablar, o entr\xE9 en un delirio
-      psic\xF3tico potente. \n<i>Notas lo que tiene en la mano.</i>\n\xA1Para! \xA1\xBFQu\xE9
+      psic\xF3tico potente. \nNotas lo que tiene en la mano.\n\xA1Para! \xA1\xBFQu\xE9
       carajo haces fumando, Coquito?! \xA1Baja eso!"
     dialogueSfx: {fileID: 0}
     objectInFront: {fileID: 21300000, guid: dcb7962bc232bd14ea5cacd61a44f27c, type: 3}
@@ -1801,8 +1801,8 @@ MonoBehaviour:
   - avatarSprite: {fileID: 0}
     avatarName: Coquito
     dialogue: "Adem\xE1\u2019, es solo un puchito al d\xEDa, pichona. Mis pulmones
-      ya no son lo que eran. Bancarse la gira se complica cuando ya van tantos conciertos.\n<i>Claramente
-      este oso no fue a ningun concierto en su vida, pero su aspecto te hace dudarlo.</i>"
+      ya no son lo que eran. Bancarse la gira se complica cuando ya van tantos conciertos.\nClaramente
+      este oso no fue a ningun concierto en su vida, pero su aspecto te hace dudarlo."
     dialogueSfx: {fileID: 0}
     objectInFront: {fileID: 21300000, guid: dcb7962bc232bd14ea5cacd61a44f27c, type: 3}
     NecessaryTrigger: 
@@ -1813,9 +1813,9 @@ MonoBehaviour:
   - avatarSprite: {fileID: 0}
     avatarName: Coquito
     dialogue: "Cuchame, Pilu, \xBFpa\u2019 qu\xE9 me venis a hablar despu\xE9s de
-      tanto tiempo? \xBFMam\xE1 \u2018ta gritandote de nuevo? Desde que dejaste la
-      supuesta \u201Ccarrera m\xE1s in\xFAtil que tiene el pa\xEDs\u201D que ella
-      no te grita. Los gritos se quedaron en el pasado, enterrados junto a tu lapiz."
+      tanto tiempo? \xBFMam\xE1 \u2018ta gritandote de nuevo?\n<i>Desde que dejaste
+      la supuesta \u201Ccarrera m\xE1s in\xFAtil que tiene el pa\xEDs\u201D que ella
+      no te grita. Los gritos se quedaron en el pasado, enterrados junto a tu lapiz.</i>"
     dialogueSfx: {fileID: 0}
     objectInFront: {fileID: 21300000, guid: dcb7962bc232bd14ea5cacd61a44f27c, type: 3}
     NecessaryTrigger: 
@@ -3251,7 +3251,7 @@ MonoBehaviour:
         m_Calls: []
   - avatarSprite: {fileID: 0}
     avatarName: 
-    dialogue: "<i>Una peque\xF1a nota se escapa, cayendo al piso. tus ojos la siguen.</i>
+    dialogue: "Una peque\xF1a nota se escapa, cayendo al piso. tus ojos la siguen.
       \nPilu, cuando tengas un verdadero problema, pone esta m\xE1scara a tu objeto
       m\xE1s preciado. Eeh, \xBFno me vas a decir nada m\xE1s?"
     dialogueSfx: {fileID: 0}
@@ -3274,8 +3274,8 @@ MonoBehaviour:
   - avatarSprite: {fileID: 0}
     avatarName: 
     dialogue: "Bueno, si estar llegando tard\xEDsimo al primer d\xEDa de trabajo
-      no cuenta como un verdadero problema, no s\xE9 qu\xE9 s\xED.\n<i>Se te empiezan
-      a ocurrir muchas otras cosas. Pero tu ansiedad las ahoga con su propia crisis.</i>"
+      no cuenta como un verdadero problema, no s\xE9 qu\xE9 s\xED.\nSe te empiezan
+      a ocurrir muchas otras cosas. Pero tu ansiedad las ahoga con su propia crisis."
     dialogueSfx: {fileID: 0}
     objectInFront: {fileID: 21300000, guid: e9f4ab9201f198a4cb15940b7354b98a, type: 3}
     NecessaryTrigger: 
