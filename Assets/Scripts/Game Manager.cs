@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private SceneController sceneController;
+
+    [Header("Menu Settings")]
+    [SerializeField] private Button StartGame;
 
     #region Singleton
     private static GameManager _instance;
@@ -18,8 +22,13 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        sceneController.SetScene(0);
+        StartGame.onClick.AddListener(PlayGame);
         SceneInfo.OnSceneComplete += SceneComplete;
+    }
+
+    private void PlayGame() 
+    {
+        sceneController.SetScene(0);
     }
 
     private void SceneComplete() 
