@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &97626194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1341539846984688606, guid: 92d6d151e283dd740b0823a3925437a4, type: 3}
+  m_PrefabInstance: {fileID: 2384868633554709399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &113738099
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113738100}
   - component: {fileID: 113738101}
+  - component: {fileID: 113738102}
   m_Layer: 5
   m_Name: Test Scene 2
   m_TagString: Untagged
@@ -187,7 +199,19 @@ MonoBehaviour:
     NecessaryInteractions: []
     dialogueEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 113738102}
+          m_TargetAssemblyTypeName: ForkDialogueController, Assembly-CSharp
+          m_MethodName: ShowForkEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - avatarSprite: {fileID: 0}
     avatarName: coco
     dialogue: Tocaste el porta retrato!
@@ -246,6 +270,71 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   sceneComplete: 0
+--- !u!114 &113738102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113738099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5682d7fc4a2d27144b1f4a37f266ab10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForkDialogueController
+  forkInfo:
+    avatarSprite: {fileID: 0}
+    avatarName: jorge
+    dialogueSfx: {fileID: 0}
+    objectInFront: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  choiceDialogues:
+  - choiceText: Tomar Te
+    sceneDialogues:
+    - avatarSprite: {fileID: 0}
+      avatarName: Jose
+      dialogue: El te es muy bueno!
+      dialogueSfx: {fileID: 0}
+      objectInFront: {fileID: 0}
+      dialogueEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - avatarSprite: {fileID: 0}
+      avatarName: Jose
+      dialogue: Hace bien a la salud!
+      dialogueSfx: {fileID: 0}
+      objectInFront: {fileID: 0}
+      dialogueEvent:
+        m_PersistentCalls:
+          m_Calls: []
+  - choiceText: Tomar Cafe
+    sceneDialogues:
+    - avatarSprite: {fileID: 0}
+      avatarName: Jose
+      dialogue: Que rico un cafe!
+      dialogueSfx: {fileID: 0}
+      objectInFront: {fileID: 0}
+      dialogueEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - avatarSprite: {fileID: 0}
+      avatarName: Jose
+      dialogue: Pero deshidrata en ayunas
+      dialogueSfx: {fileID: 0}
+      objectInFront: {fileID: 0}
+      dialogueEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - avatarSprite: {fileID: 0}
+      avatarName: Jose
+      dialogue: Es recomendable tomar un vaso de agua antes!
+      dialogueSfx: {fileID: 0}
+      objectInFront: {fileID: 0}
+      dialogueEvent:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem
   dialogueContainer: {fileID: 1008927712}
+  textContainer: {fileID: 2055482338}
   nameContainer: {fileID: 358205726}
   nameText: {fileID: 2384868633554709400}
   dialogueText: {fileID: 493056093}
@@ -579,6 +669,15 @@ MonoBehaviour:
   nextDialogue: {fileID: 1086305799}
   SfxSource: {fileID: 500834496}
   ObjectInFrontImg: {fileID: 2384868633554709401}
+  forkContainer: {fileID: 2384868633554709408}
+  forkNameContainer: {fileID: 2384868633554709404}
+  forkNameText: {fileID: 97626194}
+  forkAvatarImg: {fileID: 2384868633554709407}
+  forkDialogueBtn1: {fileID: 2384868633554709406}
+  forkDialogueText1: {fileID: 1838188442}
+  forkDialogueBtn2: {fileID: 2384868633554709405}
+  forkDialogueText2: {fileID: 708174619}
+  forkNextDialogue: {fileID: 862614068}
 --- !u!82 &500834496
 AudioSource:
   m_ObjectHideFlags: 0
@@ -809,6 +908,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041efbebb98695344bced5f16ac46622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
+--- !u!114 &708174619 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1280186780856034286, guid: 92d6d151e283dd740b0823a3925437a4, type: 3}
+  m_PrefabInstance: {fileID: 2384868633554709399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &786353338
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +1047,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &862614068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1918179003246133340, guid: 92d6d151e283dd740b0823a3925437a4, type: 3}
+  m_PrefabInstance: {fileID: 2384868633554709399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &950858500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1734,8 +1855,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
   sceneInfos:
-  - {fileID: 1723975985}
   - {fileID: 113738101}
+  - {fileID: 1723975985}
+--- !u!114 &1838188442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7069643366364108287, guid: 92d6d151e283dd740b0823a3925437a4, type: 3}
+  m_PrefabInstance: {fileID: 2384868633554709399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &2055482338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5684802981135511233, guid: 92d6d151e283dd740b0823a3925437a4, type: 3}
+  m_PrefabInstance: {fileID: 2384868633554709399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2384868633554709399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1855,6 +1992,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &2384868633554709404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6230447165857901532, guid: 92d6d151e283dd740b0823a3925437a4, type: 3}
+  m_PrefabInstance: {fileID: 2384868633554709399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2384868633554709405 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3589095144720787159, guid: 92d6d151e283dd740b0823a3925437a4, type: 3}
+  m_PrefabInstance: {fileID: 2384868633554709399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &2384868633554709406 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3964454017635353868, guid: 92d6d151e283dd740b0823a3925437a4, type: 3}
+  m_PrefabInstance: {fileID: 2384868633554709399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &2384868633554709407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1629981987253847153, guid: 92d6d151e283dd740b0823a3925437a4, type: 3}
+  m_PrefabInstance: {fileID: 2384868633554709399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &2384868633554709408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6998424126093616195, guid: 92d6d151e283dd740b0823a3925437a4, type: 3}
+  m_PrefabInstance: {fileID: 2384868633554709399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6222329480922648732
 PrefabInstance:
   m_ObjectHideFlags: 0
