@@ -37,7 +37,14 @@ public class SceneController : MonoBehaviour
 
         sceneIndex++;
 
-        sceneInfos[sceneIndex].gameObject.SetActive(true);
-        sceneInfos[sceneIndex].SetUpScene();
+        if (sceneIndex < sceneInfos.Count)
+        {
+            sceneInfos[sceneIndex].gameObject.SetActive(true);
+            sceneInfos[sceneIndex].SetUpScene();
+        }
+        else
+        {
+            Debug.Log("<color=green>COMPLETASTE EL JUEGO, NO HAY MAS ESCENAS PARA MOSTRAR</color>");
+        }
     }
 }

@@ -36,11 +36,13 @@ public class SceneInfo : MonoBehaviour
     public void EndUpScene() 
     {
         DialogueSystem.OnNextDialogueClick -= () => TryShowNextDialogue(string.Empty);
+        DialogueSystem.OnNextDialogueClick = null;
 
         foreach (var obj in objectsInScene) 
         {
             obj.interactableObject.OnInteraction -= obj.AlreadyInteracted;
-            obj.interactableObject.OnInteraction += TryShowNextDialogue;
+            obj.interactableObject.OnInteraction -= TryShowNextDialogue;
+            obj.interactableObject.OnInteraction = null;
         }                  
     }
 

@@ -52,7 +52,6 @@ public class DialogueSystem : MonoBehaviour
         ObjectInFrontImg.sprite = dialogueInfo.objectInFront;
         ObjectInFrontImg.enabled = dialogueInfo.objectInFront != null ? true : false;
 
-        SfxSource.clip = dialogueInfo.dialogueSfx;
         if (dialogueInfo.dialogueSfx != null)
         {
             SfxSource.clip = dialogueInfo.dialogueSfx;
