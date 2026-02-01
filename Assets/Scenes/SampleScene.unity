@@ -1779,7 +1779,7 @@ MonoBehaviour:
   - avatarSprite: {fileID: 0}
     avatarName: 
     dialogue: "...O la m\xE1scara te est\xE1 haciendo hablar, o entr\xE9 en un delirio
-      psic\xF3tico potente. \nNotas lo que tiene en la mano.\n\xA1Para! \xA1\xBFQu\xE9
+      psic\xF3tico potente. \n<i>Notas lo que tiene en la mano.</i>\n\xA1Para! \xA1\xBFQu\xE9
       carajo haces fumando, Coquito?! \xA1Baja eso!"
     dialogueSfx: {fileID: 0}
     objectInFront: {fileID: 21300000, guid: dcb7962bc232bd14ea5cacd61a44f27c, type: 3}
@@ -1896,9 +1896,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - avatarSprite: {fileID: 0}
-    avatarName: 
-    dialogue: "No pod\xEDa ser la nena que le tiene miedo a la lluvia para siempre.
-      En alg\xFAn momento ten\xEDa que crecer."
+    avatarName: Coquito
+    dialogue: "No, no pod\xEDas, pero no por eso ten\xEDas que dejar de ser vo\u2019.
+      Pode\u2019 cambiar, pero no perderte."
     dialogueSfx: {fileID: 0}
     objectInFront: {fileID: 21300000, guid: dcb7962bc232bd14ea5cacd61a44f27c, type: 3}
     NecessaryTrigger: 
@@ -1907,9 +1907,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - avatarSprite: {fileID: 0}
-    avatarName: Coquito
-    dialogue: "No, no pod\xEDas, pero no por eso ten\xEDas que dejar de ser vo\u2019.
-      Pode\u2019 cambiar, pero no perderte."
+    avatarName: 
+    dialogue: "No pod\xEDa ser la nena que le tiene miedo a la lluvia para siempre.
+      En alg\xFAn momento ten\xEDa que crecer."
     dialogueSfx: {fileID: 0}
     objectInFront: {fileID: 21300000, guid: dcb7962bc232bd14ea5cacd61a44f27c, type: 3}
     NecessaryTrigger: 
@@ -3251,7 +3251,7 @@ MonoBehaviour:
         m_Calls: []
   - avatarSprite: {fileID: 0}
     avatarName: 
-    dialogue: "Una peque\xF1a nota se escapa, cayendo al piso. tus ojos la siguen.
+    dialogue: "<i>Una peque\xF1a nota se escapa, cayendo al piso. tus ojos la siguen.</i>
       \nPilu, cuando tengas un verdadero problema, pone esta m\xE1scara a tu objeto
       m\xE1s preciado. Eeh, \xBFno me vas a decir nada m\xE1s?"
     dialogueSfx: {fileID: 0}
