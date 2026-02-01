@@ -1,16 +1,33 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private string objID = "Test Object";
+    [SerializeField] private Button objButton;
+    [SerializeField] private Image objImage;
+    public string ObjectID => objID;
+
+    public Action<string> OnInteraction;
+
+    private void OnEnable()
     {
-        
+        objButton.onClick.AddListener(ObjectPressed);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        objButton.onClick.RemoveListener(ObjectPressed);
+    }
+
+    private void ObjectPressed() 
+    {
+        OnInteraction?.Invoke(objID);
+    }
+
+    public void ChangeImg(Sprite newSprite) 
+    {
+        objImage.sprite = newSprite;
     }
 }
