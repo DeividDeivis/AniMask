@@ -2254,7 +2254,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - avatarSprite: {fileID: 0}
-    avatarName: 
+    avatarName: Coquito
     dialogue: "...No... Vo\u2019 no so\u2019 eso, pichona."
     dialogueSfx: {fileID: 8300000, guid: 49d3a1385dc015b4698dee13aa3812de, type: 3}
     objectInFront: {fileID: 21300000, guid: bdd76d0150750fe4a87bc4f845e18789, type: 3}
