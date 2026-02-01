@@ -107,7 +107,7 @@ public class DialogueSystem : MonoBehaviour
         nextDialogue.gameObject.SetActive(true);
 
         forkContainer.gameObject.SetActive(false);
-        dialogueContainer.SetActive(false);
+        //dialogueContainer.SetActive(false);
     }
 
     #region Fork Dialogues
