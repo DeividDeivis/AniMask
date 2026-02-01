@@ -4,9 +4,14 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private SceneController sceneController;
+    [SerializeField] private DialogueSystem dialogueSystem;
 
     [Header("Menu Settings")]
     [SerializeField] private Button StartGame;
+
+    [Header("End Settings")]
+    [SerializeField] private GameObject EndSceneContainer;
+    [SerializeField] private Button PlayAgain;
 
     #region Singleton
     private static GameManager _instance;
@@ -23,7 +28,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartGame.onClick.AddListener(PlayGame);
+
         SceneInfo.OnSceneComplete += SceneComplete;
+
+        sceneController.GameOver += ShowEndScene;
+        PlayAgain.onClick.AddListener(RestartGame);
     }
 
     private void PlayGame() 
@@ -34,5 +43,21 @@ public class GameManager : MonoBehaviour
     private void SceneComplete() 
     {
         sceneController.NextScene();
+    }
+
+    private void ShowEndScene()
+    {
+        DialogueSystem.Instance.CloseDialogue();
+        DialogueSystem.Instance.CloseForkDialogue();
+
+        dialogueSystem.gameObject.SetActive(false);
+
+        EndSceneContainer.SetActive(true);
+    }
+
+    private void RestartGame() 
+    {
+        EndSceneContainer.SetActive(false);
+        DialogueSystem.OnNextDialogueClick = null;
     }
 }

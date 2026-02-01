@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,6 +6,8 @@ public class SceneController : MonoBehaviour
 {
     [SerializeField] private List<SceneInfo> sceneInfos;
     private int sceneIndex = 0;
+
+    public Action GameOver;
 
     #region Singleton
     private static SceneController _instance;
@@ -45,6 +48,10 @@ public class SceneController : MonoBehaviour
         else
         {
             Debug.Log("<color=green>COMPLETASTE EL JUEGO, NO HAY MAS ESCENAS PARA MOSTRAR</color>");
+            GameOver?.Invoke();
+
+            DialogueSystem.OnNextDialogueClick += DialogueSystem.Instance.CloseDialogue;
+            DialogueSystem.OnNextDialogueClick += DialogueSystem.Instance.CloseForkDialogue;
         }
     }
 }
